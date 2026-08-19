@@ -4,7 +4,7 @@ import argparse
 from utilities import backup
 import time
 
-version_str = '1.0.0'
+version_str = '1.1.0'
 parser = argparse.ArgumentParser()
 
 parser.add_argument('-i',
