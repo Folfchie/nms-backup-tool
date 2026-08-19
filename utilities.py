@@ -14,13 +14,21 @@ def backup(src_path, dst_path):
                 valid_items.append(item)
     elif src_path.is_file() and src_path.suffix == '.hg':
         valid_items.append(src_path)
+    if len(valid_items) > 1:
+        multiple_items = True
+    else:
+        multiple_items = False
     if valid_items:
         if dst_path.is_dir():
-            dst_path = Path(f'{dst_path}/{timestamp}')
+            dst_path = Path(f'{dst_path}/nomanssky_save_backup_{timestamp}')
             dst_path.mkdir(parents=True, exist_ok=True)
             for item in valid_items:
                 print(f'Backing up "{item}" to "{dst_path}"...')
                 shutil.copy2(item, dst_path)
+            if multiple_items:
+                print(f'Creating ZIP archive "{dst_path}.zip"...')
+                shutil.make_archive(str(dst_path), 'zip', dst_path)
+                shutil.rmtree(dst_path)
             return True
         else:
             print(f'The directory "{dst_path}" does not exist or is not a directory.')
