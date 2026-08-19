@@ -39,3 +39,4 @@ if backup(args.sourcePath, args.destinationPath):
     print('Backup complete!')
 else:
     print('Backup failed.')
+    exit(1)
