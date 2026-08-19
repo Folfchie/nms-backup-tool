@@ -20,7 +20,7 @@ python3 ./nms-backup-tool.py -i {sourceDirectory} -o {destinationDirectory}
 -i    Source directory, must be an absolute path, can be a file or directory
 -o    Destination directory, must be an absolute path, can be a file or directory
 -s    Silent mode, suppresses console output
--s    Autosave, enables automatic backup
+-a    Autosave, enables automatic backup
 ```
 
 ## Behavior
