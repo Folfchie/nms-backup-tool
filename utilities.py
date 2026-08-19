@@ -2,10 +2,10 @@ import shutil
 import datetime
 from pathlib import Path
 
-timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H.%M.%S")
 
 def backup(src_path, dst_path):
     valid_items = []
+    timestamp = datetime.datetime.now().strftime("%Y-%m-%dT%H.%M.%S")
     src_path = Path(src_path)
     dst_path = Path(dst_path)
     if src_path.is_dir():
