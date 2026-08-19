@@ -2,7 +2,7 @@
 A simple Python script that I use to automate No Man's Sky save backups.
 
 ## Dependencies
-Requires Python 3.6+ (PEP 498).
+Requires Python 3.6+ (PEP 498)
 
 ## Installation
 * Download the latest release
