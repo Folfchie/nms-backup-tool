@@ -33,7 +33,6 @@ print('\nTHE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXP
       'TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE\n'
       'OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.\n')
 
-
 print('Starting backup...')
 if backup(args.sourcePath, args.destinationPath):
     print('Backup complete!')
